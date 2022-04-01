@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag 'common', :media => "all" %>
+<ul class="navi-item">
+  <li class="nav-item">
+
+       <!-- <%= form_with url: "/rooms/search", method: :get, local: true do |f| %>
+        <%= f.text_field :area, placeholder: "\uf3c5 エリア", class:"fas search font d-none" %>
+        <%= f.text_field :keyword, placeholder: "\uf3c5 キーワード", class:"fas search font d-none" %>
+        <%= f.submit"", class:"search_sub" %>
+      <% end %> -->
+  </div>
+  <div class="login_user">
+    <div class="user_name"><%= @user.name %></div>
+    <div class="user_avatar" id="user_icon" ><%= image_tag @user.image.url, :size => '80x70'%></div>
+  </div>
+  <div id="navi" class="popup-nav">
+      <p><%= link_to"ルーム登録","/rooms/new",class:"js_menu" %></p>
+      <p><%= link_to"予約済みのルーム一覧","/reserves/reserved",class:"js_menu" %></p>
+      <p><%= link_to"登録済みのルーム一覧","/rooms/index",class:"js_menu" %></p>
+      <p><%= link_to"設定","/users/account",class:"js_menu" %></p>
+      <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "js_menu" %></p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+     $('#user_icon').click(function () {
+     $('#navi').slideToggle(300);
+     });
+  });
+</script>
+

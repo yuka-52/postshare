@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag 'registrations_edit', :media =>"all" %>
+<div class="login-page"></div>
+<div class="edit-box">
+　　<h2>アカウント編集 </h2>
+
+　　<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+   <%= render "devise/shared/error_messages", resource: resource %>
+
+<div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",:size => "30*25" %>
+</div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+<div class="field">
+    <%= f.label :password %> <i>(変更する場合のみ入力)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password",:size => "30*25" %>
+    <% if @minimum_password_length %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><i>(変更する場合のみ入力)</i><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",:size => "30*25" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_password %><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" ,:placeholder => "現在のパスワードを入力" ,:size => "30*25"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "更新",{ class: "update-btn" } %>
+  </div>
+<% end %>
+  <div class="actions">
+    <%= link_to :back do %>
+     <button class="back-btn1">戻る</button>
+ </div>
+<% end %>

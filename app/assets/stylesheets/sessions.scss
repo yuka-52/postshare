@@ -1,0 +1,48 @@
+.login-page {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.login-box {
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 60px auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 6px 0px;
+    
+}
+
+.field {
+    margin:10px 5px;
+}
+
+.condition {
+    color: white;
+    border: solid 3px #FF69A3;
+    border-radius: 5px;
+    background-color: #FF69A3;
+    font-size:14px;
+}
+
+.actions {
+    margin:20px 15px;
+}
+
+.action-btn {
+   color: white;
+   background-color: #6495ED;
+   border-radius: 5px;
+   width: 180px;
+   font-size:16px;
+}
+
+.newaction-btn {
+   color: #6495ED;
+   text-decoration: none;
+}

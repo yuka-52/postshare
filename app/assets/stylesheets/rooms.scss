@@ -1,0 +1,117 @@
+.room_index_main {
+    width: 100%;
+    margin: 40px 60px;
+}
+
+table th {
+    background-color: #EEEEEE;
+    padding: 10px 20px;
+    }
+ 
+table td {
+    background-color: #EEEEEE;
+    padding: 10px 20px;
+    }
+
+.login-page {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.user-nav-pc {
+    height: 60vh;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 30px 15px;
+    
+}
+
+.active1 {
+    border-right: 3px solid #4a90e2;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.room-profile-btn {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    color: #4a90e2;
+}
+
+.room-box {
+    width: 45%;
+    text-align: left;
+    padding: 24px;
+    margin: 60px auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 6px 0px;
+    position: relative;
+}
+
+.room-main {
+    position: absolute;
+    top: 10px;
+    margin: 10px 0px;
+    padding-bottom:20px;
+}
+
+.line {
+    border-top: 1px dotted #8c8b8b;
+}
+
+.room_view_content {
+    position:relative;
+    top: 40px;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+
+.require {
+   font-weight: bold;
+}
+
+.condition {
+    color: white;
+    border: solid 3px #FF69A3;
+    border-radius: 5px;
+    background-color: #FF69A3;
+    font-size:14px;
+}
+
+.form {
+    position: absolute;
+    left: 200px;
+    width: 150px;
+}
+
+.form-text , .form-image {
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    width: 250px;
+}
+.room_create_btn {
+   color: white;
+   background-color: #6495ED;
+   border-radius: 5px;
+   width: 100px;
+   font-size:18px;
+
+}
+

@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Postshare</title>
+    <title>myPostshare</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <%= stylesheet_link_tag 'common', :media => "all" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <header>
+    <%= link_to image_tag("logo.png" , class:"logo"),root_path %>
+    <%  if user_signed_in?  %><!-- ユーザーがログインしているか調べる -->
+      <%= render"shared/user" %>
+    <% else %>
+      <%= render"shared/guest" %>
+    <% end %>
+   
+   </header>
+  
     <%= yield %>
+  
+  <footer>
+    <h5> 2022 POTEPAN.INC.
+  </footer>
   </body>
 </html>

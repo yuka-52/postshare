@@ -1,0 +1,50 @@
+<%= stylesheet_link_tag 'rooms', :media =>"all" %>
+<div class="login-page"></div>
+  <div class="row">
+    <div class="col-lg2 user-nav-pc d-lg-block d-none">
+      <ul>
+        <li class="active1">
+          <%=link_to "基本情報", rooms_new_path , {class: "room-profile-btn"} %>
+        </li>
+      </ul>
+    </div>
+    <div class="room-box">
+      <h2 class="room-main">ルーム情報登録</h2>
+      <%= form_with model: @room, local: true do |f| %>
+      <div class="room_view_content">
+        <span><%= f.label :ルーム名, {class: 'require'} %></span>
+        <span class="condition">必須</span>
+        <%= f.text_field :room_name, placeholder:"ルーム名を入力", class: 'form' %>
+        <hr class= "line">
+      </div>
+      <div class="room_view_content">
+        <span><%= f.label :ルーム紹介, {class: 'require'} %></span>
+        <span class="condition">必須</span>
+        <%= f.text_area :room_profile, placeholder:"ルーム説明を入力", class: 'form-text' %>
+        <hr class= "line">
+      </div>
+      <div class="room_view_content">
+        <span><%= f.label :料金, {class: 'require'} %></span>
+        <span class="condition">必須</span>
+        <%= f.text_field :price, placeholder:"一日あたりの料金を入力", class: 'form' %>
+        <hr class= "line">
+      </div>
+      <div class="room_view_content">
+        <span><%= f.label :住所, {class: 'require'} %></span>
+        <span class="condition">必須</span>
+        <%= f.text_field :room_address, placeholder:"住所を入力", class: 'form' %>
+        <hr class= "line">
+      </div>
+      <div class="room_view_content">
+        <span><%= f.label :ルーム画像, {class: 'require'} %></span>
+        <span class="condition">必須</span>
+        <%= f.file_field :room_image, {class: 'form-image'} %>
+        <hr class= "line">
+      </div>
+      <div class="room_view_content">
+        <%= f.submit"登録" , class:"room_create_btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

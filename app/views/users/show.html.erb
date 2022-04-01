@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag 'users', :media =>"all" %>
+<div class="login-page"></div>
+<div class="row">
+<div class="col-lg2 user-nav-pc d-lg-block d-none">
+  <ul>
+    <li class="active1">
+    <%=link_to "アカウント",users_show_path , {class: "account-btn"} %>
+    </li>
+    <li class="active2">
+    <%=link_to "プロフィール", user_profile_path, {class: "profile-btn"} %>
+    </li>
+  </ul>
+</div>
+<div class="account-box">
+　　<h2 class="account-main">アカウント</h2>
+
+<div class="show-main">
+  <hr class= "line">
+  <span class="show-title">メールアドレス</span>
+  <span class="my-email"> <%= @current_user.email %></span>
+</div>
+
+<div class="show-main">
+  <hr class= "line">
+  <span class="show-title">パスワード</span>
+  <span><%= @current_user.password %></span>
+  <span class="my-password">******</span>
+  <hr class= "line">
+</div>
+<div class="action">
+<%= button_to "編集", edit_user_registration_path,  {method: :get, class: 'edit-btn' }%></div>
+</div>

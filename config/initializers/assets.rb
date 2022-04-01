@@ -3,6 +3,18 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 
+Rails.application.config.assets.precompile += %w(
+      style.css
+      application.css
+       tops.css
+       users.css
+       common.css
+       sessions.css
+       registrations_new.scss
+       registrations_edit.scss
+       profile.css
+      rooms.css
+      )
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.

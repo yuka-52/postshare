@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag 'common', :media => "all" %>
+
+<ul class="navi-item">
+  <li class="nav-item">
+    <%= button_to "ログイン", new_user_session_path, {method: :post,class: 'loginbtn'} %></div><!-- ログイン画面に移行する -->
+  </li>
+  <li class="nav-item">
+    <%= button_to "新規登録", new_user_registration_path,  {method: :get, class: 'newbtn' }%></div>
+    <! 新規登録画面に移行する>
+  </li>
+</ul>

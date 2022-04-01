@@ -1,0 +1,134 @@
+.main_pic {
+    background-image: url(/assets/img_cover_top.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+.section-title {
+    position:absolute;
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: bold;
+    left: 320px;
+}
+
+.panel-area {
+    position: relative;
+    margin: 60px 0px;
+    top: 40px;
+    hight: 500px;
+    left: 130px;
+    right: 130px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    position: relative;
+    left: 200px;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 14%;
+    margin: 10px;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.img_select {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    vertical-align: middle;
+    border-style: none;
+    position:relative;
+}
+ 
+.tokyo, .osaka, .kyoto, .sapporo {
+    position: absolute;
+    color: white;
+    bottom: 35px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.tokyo {
+    left: 110px;
+}
+.osaka {
+    left: 360px;
+}
+.kyoto {
+    left: 610px;
+}
+.sapporo {
+    left: 880px;
+}
+
+.login-page {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.login-box {
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 60px auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 6px 0px;
+    
+}
+
+.field {
+    margin:10px 5px;
+}
+
+.condition {
+    color: white;
+    border: solid 3px #FF69A3;
+    border-radius: 5px;
+    background-color: #FF69A3;
+    font-size:14px;
+}
+
+.actions {
+    margin:20px 15px;
+}
+
+.action-btn {
+   color: white;
+   background-color: #6495ED;
+   border-radius: 5px;
+   width: 180px;
+   font-size:16px;
+}
+
+.newaction-btn {
+   color: #6495ED;
+   text-decoration: none;
+}
+
