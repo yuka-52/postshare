@@ -1,0 +1,46 @@
+<%= stylesheet_link_tag 'rooms', :media =>"all" %>
+<div class="container show-room">
+  <div class="row">
+    <div class="col-md-8">
+      <%= image_tag @room.room_image.url, class:"room-image" %>
+    </div>
+    <div class="room-show-subtitle">
+      <div class="icon-table"> <!- ルーム登録者のアイコン表示 ->
+          <% if @user.id == @reservation.user_id %>
+            <%= image_tag @user.image, class:"icon-image" %>
+          <% else %>
+            <%= image_tag 'fallback/defalt_user_avatar.jpeg', class:"icon-image" %>
+          <% end %>
+      </div>
+        <div class="room-section">
+          <span class="room-name"><%= @room.room_name %></span>
+          <br>
+          <span class="room_address"><%= @room.room_address %></span>
+        </div>
+          <p class="room-profile-title"><ルーム紹介></p>
+          <br>
+          <span class="room_profile"><%= @room.room_profile %></span>
+          <br>
+    </div>
+  
+       <div class="reservation-form">
+          <%= form_with model:@reservation,method: :post, url:confirm_path do |f| %>
+          <h5 class="price-icon">
+            <%= @room.price %> /日
+          </h5>
+            <%= f.hidden_field :room_id, value:@room.id %>
+            <%= f.hidden_field :user_id, value:current_user.id  %>
+            <%= f.hidden_field :price, value: @room.price %>
+          <dl>
+            <dt>開始日</dt>
+            <dd><%= f.date_field :start_date,{class: 'form-r'} %></dd>
+            <dt>終了日</dt>
+            <dd><%= f.date_field :end_date, {class: 'form-r'}%></dd>
+            <dt>人数</dt>
+            <dd><%= f.number_field :number_of_people, in: 1..100 ,class: 'form-r' %></dd>
+          </dl>
+            <%= f.submit '予約する' ,class:"reservation-btn" %>
+            <% end %>
+       </div>
+  </div>
+</div>

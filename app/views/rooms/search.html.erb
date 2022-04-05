@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag 'rooms', :media =>"all" %>
+<div class="room_index_main">
+  <h1 class="page-tittle">検索結果<%= @rooms.count %>件</h1>
+    <table class="room_table">
+      <thead>
+        <tr>
+          <th>ルーム画像</th>
+          <th>ルーム名</th>
+          <th>ルーム紹介</th>
+          <th>住所</th>
+          <th>宿泊料金</th>
+          <th>ルーム詳細</th>
+        </tr>
+      </thead>
+          
+      <tbody>
+        <% @rooms.each do |room| %>
+          <tr>
+            <td><%= image_tag room.room_image.url, class: 'room_image' %></td>
+            <td><%= room.room_name %></td>
+            <td><%= room.room_profile %></td>
+            <td><%= room.room_address %></td>
+            <td>¥<%= room.price %></td>
+            <td><%= link_to "ルーム詳細へ", room %></td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+</div>
+  

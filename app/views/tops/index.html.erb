@@ -1,26 +1,35 @@
 <%= stylesheet_link_tag 'tops', :media => "all" %>
-<div class="main_pic"></div>
-
-
+  <div class="main_pic"></div>
+  <div class="search-box">
+    <p class="title">Potepan Shareでまだ体験したことのない旅をしよう</p>
+    <br>
+    <%= form_tag(search_rooms_path,:method => 'get') do %>
+    <%= label :search, :エリア, {class: 'area-title'} %>
+    <br>
+    <%= text_field_tag :address,"",placeholder:"東京",class:"form-control",size: "50" %>
+    <br>
+    <%= submit_tag '探す', class:"search_btn" %>
+    <% end %>
+  </div>
 <div class="container">
   <h3 class="section-title">おすすめのエリア</h3></div>
 
 <div class="panel-area">
 <div class="row">
   <div class="panel-item col-lg-3 col-6">
-  <%= link_to image_tag("img_tokyo.jpeg", class: "img_select"),root_path %>
+  <%= link_to image_tag("img_tokyo.jpeg", class: "img_select"),'rooms/search?address=東京&commit=探す' %>
       <p class="tokyo">東京</p>
   </div>
   <div class="panel-item col-lg-3 col-6">
-    <%= link_to image_tag("img_osaka.jpeg", class: "img_select"),root_path  %>
+    <%= link_to image_tag("img_osaka.jpeg", class: "img_select"),'rooms/search?address=大阪&commit=探す'  %>
     <p class="osaka">大阪</p>
   </div>
   <div class="panel-item col-lg-3 col-6">
-    <%= link_to image_tag("img_kyoto.jpeg", class: "img_select"),root_path %>
+    <%= link_to image_tag("img_kyoto.jpeg", class: "img_select"),'rooms/search?address=京都&commit=探す' %>
     <p class="kyoto">京都</p>
   </div>
   <div class="panel-item col-lg-3 col-6">
-    <%= link_to image_tag("img_sapporo.jpeg", class: "img_select"),root_path %>
+    <%= link_to image_tag("img_sapporo.jpeg", class: "img_select"),'rooms/search?address=札幌&commit=探す' %>
     <p class="sapporo">札幌</p>
 </div>
 </div>

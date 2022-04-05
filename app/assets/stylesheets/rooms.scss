@@ -12,6 +12,11 @@ table td {
     background-color: #EEEEEE;
     padding: 10px 20px;
     }
+    
+.room_image {
+    width: 250px;
+    
+}
 
 .login-page {
     width: 100%;
@@ -114,4 +119,119 @@ ul {
    font-size:18px;
 
 }
+.room_update_btn {
+   color: white;
+   background-color: #6495ED;
+   border-radius: 5px;
+   width: 100px;
+   font-size:18px;
+}
 
+.room_tag {
+    text-decoration: none;
+    color: black;
+}
+
+.show-room {
+    padding: 30px 0 ;
+
+}
+.container {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+    
+.col-md-8 {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 66%;
+    max-width: 66%;
+}
+
+.room-show-subtitle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 320px;
+}
+
+.room-image {
+    width: 70%;
+    object-fit: cover;
+}
+
+.icon-table {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.icon-image {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+}
+
+.room-section {
+    padding: 15px;
+    width: 250px;
+}
+
+.room-name {
+    position: absolute;
+    top: 3px;
+    font-size: 18px;
+}
+
+.room_address {
+    font-size: 16px;
+}
+
+.room-profile-title {
+    position: absolute;
+    padding: 20px;
+    top: 60px;
+    left: 70px;
+}
+.room_profile{
+    position: absolute;
+    padding: 20px;
+    top: 110px;
+    left: 80px;
+}
+
+.reservation-form {
+    width: 400px;
+    text-align: left;
+    padding: 15px;
+    margin: 15px auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 6px 0px;
+    position: relative;
+    right: 200px;
+}
+
+.price-icon {
+    font-size: 18px;
+}
+
+dt {
+    font-size: 16px;
+}
+
+.form-r {
+    width: 250px;
+    margin: 5px;
+}
+
+.reservation-btn {
+   color: white;
+   background-color: #6495ED;
+   border-radius: 5px;
+   width: 100px;
+   font-size:18px;
+}

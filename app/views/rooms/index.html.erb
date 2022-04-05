@@ -1,9 +1,8 @@
 <%= stylesheet_link_tag 'rooms', :media =>"all" %>
-<% if flash[:notice] %>
 <div class="room_index_main">
   <h2>登録済みルーム一覧</h2>
 
-  <table>
+  <table class= "room_table">
     <thead>
       <tr>
         <th>ルーム画像</th>
@@ -17,19 +16,19 @@
       </thead>
  
       <tbody>
-          <tr>
-            <% @rooms.each do |room| %>
-            <td><%= image_tag room.room_image %></td>
-            <td><%= link_to room.room_name %></td>
-            <td><%= room.room_profile %></td>
-            <td>¥<%= room.price %></td>
-            <td><%= room.created_at %></td>
-            <td><%= link_to "編集", [:edit, room] %></td>
-            <td><%= link_to "削除", room, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
-            <% end %>
+        <% @rooms.each do |room| %>
+        <tr>
+          <td><%= image_tag room.room_image.url, class:"room_image" %></td>
+          <td><%= link_to room.room_name , room, class:"room_name"%></td>
+          <td><%= room.room_profile %></td>
+          <td>¥<%= room.price %></td>
+          <td><%= room.created_at %></td>
+          <td><%= link_to "編集", [:edit, room],class:"room_tag" %></td>
+          <td><%= link_to "削除", room, method: :delete, data: { confirm: "本当に削除しますか？" },class:"room_tag" %></td>
+        <% end %>
           </tr>
       </tbody>
     </table>
 </div>
-<% end %>
+
 

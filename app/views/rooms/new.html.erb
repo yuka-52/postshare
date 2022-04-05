@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag 'rooms', :media =>"all" %>
+<%= render "shared/error_messages", obj:@room %>
 <div class="login-page"></div>
   <div class="row">
     <div class="col-lg2 user-nav-pc d-lg-block d-none">
@@ -41,10 +42,10 @@
         <%= f.file_field :room_image, {class: 'form-image'} %>
         <hr class= "line">
       </div>
+       <%= f.hidden_field :user_id, value:current_user.id %>
       <div class="room_view_content">
         <%= f.submit"登録" , class:"room_create_btn" %>
       </div>
     <% end %>
   </div>
 </div>
-

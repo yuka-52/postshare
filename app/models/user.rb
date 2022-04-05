@@ -10,6 +10,8 @@ class User < ApplicationRecord
   attr_accessor :current_password
   
   mount_uploader :image, AvatarUploader
+  has_many :rooms
+  has_many :reservations, dependent: :destroy
   
   def update_without_current_password(params, *options)
       if params[:password].blank? && params[:password_confirmation].blank?

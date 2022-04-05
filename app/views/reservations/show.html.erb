@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag 'reservations', :media =>"all" %>
+<div class="complete-container">
+  <div class="complete-box">
+    <h3 class="complete-r">予約が完了しました！</h3>
+    <hr class="line">
+    <p class="sub-title">開始日</p>
+    <dd><%= @reservation.start_date.to_s(:datetime_jp) %></dd>
+    <hr class="line">
+    <p class="sub-title">終了日</p>
+    <dd><%= @reservation.end_date.to_s(:datetime_jp) %></dd>
+    <hr class="line">
+    <p class="sub-title">合計金額</p>
+    <dd><%= @reservation.total_price %>円</dd>
+    <hr class="line">
+    <br>
+    <div class="btn-design">
+      <%= link_to 'トップへ戻る', '/' %>
+    </div>
+  </div>
+</div>

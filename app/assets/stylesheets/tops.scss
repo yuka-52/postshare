@@ -132,3 +132,40 @@
    text-decoration: none;
 }
 
+.search-box {
+    background-color: white;
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 400px;
+    left: 250px;
+    border-radius: 5px;
+}
+.title {
+    font-size: 28px;
+    margin: 5px;
+}
+
+.area-title {
+    font-size: 14px;
+    position: relative;
+    top: -20px;
+}
+
+.form-control {
+    position: relative;
+    top: -10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.search_btn {
+    color: white;
+    background-color: #6495ED;
+    border-radius: 5px;
+    width: 490px;
+    font-size:16px;
+    position: center;
+    margin-left: 10px;
+}

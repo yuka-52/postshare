@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag 'reservations', :media =>"all" %>
+<div class="reservation_index_main">
+  <h2>予約済みルーム一覧</h2>
+    <table class= "reservation_table">
+      <table>
+        <thead>
+          <tr>
+            <th>ルーム画像</th>
+            <th>ルーム名</th>
+            <th>ルーム紹介</th>
+            <th>合計金額</th>
+            <th>開始日</th>
+            <th>終了日</th>
+            <th>予約確定日時</th>
+          </tr>
+        </thead>
+   
+        <tbody>
+          <% @rooms.each do |room| %>
+          <% @reservations.each do |res| %>
+          <% if room.id == res.room_id %>
+          <% if current_user.id == res.user_id %>
+          <tr>
+            <td>
+              <%= link_to room do %>
+              <%= image_tag room.room_image.url, class: 'posts_image' %>
+              <% end %>
+            </td>
+              <td><%= link_to room.room_name , room %></td>
+              <td><%= room.room_profile %></td>
+              <td>¥<%= res.total_price %></td>
+              <td><%= res.start_date.to_s(:datetime_jp) %></td>
+              <td><%= res.end_date.to_s(:datetime_jp) %></td>
+              <td><%= res.created_at.to_s(:datetime_jp) %></td>
+        <% end %>
+        <% end %>
+        <% end %>
+        <% end %>
+    </tbody>
+  </table>
+</div>
