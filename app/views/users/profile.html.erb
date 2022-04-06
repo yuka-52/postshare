@@ -1,0 +1,51 @@
+<%= stylesheet_link_tag 'profile', :media =>"all" %>
+<div class="login-page"></div>
+  <div class="row">
+    <div class="col-lg2 user-nav-pc d-lg-block d-none">
+      <ul>
+        <li class="active1">
+          <%=link_to "アカウント",users_show_path , {class: "account-btn"} %>
+        </li>
+        <li class="active2">
+          <%=link_to "プロフィール", user_profile_path, {class: "profile-btn"} %>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-box">
+      <h2 class="account-main">プロフィール</h2>
+      <%= form_with model: @user, local: true do |f| %>
+        <div class="icon_content">
+          <hr class= "line">
+          <% if @user.image? %>
+            <%= image_tag @user.image.url, class: 'profile-avatar'%>
+          <% else %>
+                <%= image_tag 'fallback/defalt_user_avatar.jpeg', class: 'profile-avatar' %>
+          <% end %>
+          <hr class= "line">
+        </div>
+        <div class="user_view_content">
+          <span><%= f.label :アイコン画像, {class: 'require'} %></span>
+          <span class="condition">必須</span>
+          <%= f.file_field :image, {class: 'form'} %>
+          <hr class= "line">
+        </div>
+        <div class="user_view_content">
+          <span><%= f.label :名前, {class: 'require'} %></span>
+          <span class="condition">必須</span>
+          <%= f.text_field :name, {class: 'form'}%>
+          <hr class= "line">
+        </div>
+        <div class="user_view_content">
+          <span><%= f.label :自己紹介, {class: 'require'} %></span>
+          <span class="condition">必須</span>
+          <%= f.text_area :introduction, placeholder:"自己紹介を入力", class: 'form' %>
+          
+        </div>
+        <div class="user_view_content">
+            <hr class= "line">
+            <%= f.submit"更新" , class:"update_btn" %>
+        </div>
+    <% end %>
+    </div>
+  </div>
+</div>

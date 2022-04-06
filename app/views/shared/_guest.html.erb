@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag 'common', :media => "all" %>
+
+<ul class="navi-item">
+  <li class="nav-item">
+    <div class="header-search">
+      <%= form_tag(search_rooms_path,:method => 'get') do %>
+      <%= text_field_tag :address,"",placeholder:"エリアを入力",class:"form-control" %>
+      <%= submit_tag '', class:"search_sub" %>
+      <% end %>
+    </div></li>
+  <li class="nav-item">
+    <div class="header-search">
+      <%= form_tag(search_rooms_path,:method => 'get') do %>
+      <%= text_field_tag :search,"",placeholder:"キーワードを入力",class:"form-control" %>
+      <%= submit_tag '', class:"search_sub" %>
+      <% end %>
+    </div></li>
+  <li class="guest-nav-item1">
+    <%= button_to "ログイン", new_user_session_path, {method: :post,class: 'loginbtn'} %></div><!-- ログイン画面に移行する -->
+  </li>
+  <li class="guest-nav-item2">
+    <%= button_to "新規登録", new_user_registration_path,  {method: :get, class: 'newbtn' }%></div>
+    <! 新規登録画面に移行する>
+  </li>
+</ul>
