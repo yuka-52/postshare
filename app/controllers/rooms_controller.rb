@@ -56,10 +56,5 @@ class RoomsController < ApplicationController
     @user = current_user
     @rooms = Room.search(params[:search],params[:address])
   end
-  
-  private
-  
-  def room_params
-    params.require(:room).permit(:room_name, :room_address, :room_profile, :room_image, :price, :room_id)
-  end
+
  end

@@ -11,7 +11,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(params.require(:reservation).permit(:start_date, :end_date, :total_price, :number_of_people, :total_days, :user_id, :room_id))
+    @reservation = Reservation.new(reservation_params)
     if @reservation.save
       flash[:notice] = "予約を受け付けました。"
       redirect_to  @reservation
@@ -21,8 +21,8 @@ class ReservationsController < ApplicationController
   end
 
   def show
-      @user = current_user
-      @reservation = Reservation.find(params[:id])
+    @user = current_user
+    @reservation = Reservation.find(params[:id])
   end
 
   def edit
